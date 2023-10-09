@@ -1,9 +1,32 @@
 package CapaPresentacion;
+import Facturacion.Factura;
+import TablaProductos_Lions.Form_Producto;
+import TablaEmpleado_Lions.Form_Empleado;
+import TablaCliente_Lions.Form_Cliente;
+import TablaProveedores_Lions.Form_Proveedores;
 import CapaNegocio.ClaseNegocio;
 import CapaEntidad.ClaseEntidad;
+
+import TablaProveedores_Lions.Proveedores;
+
+import TablaCliente_Lions.Cliente;
+
+import TablaEmpleado_Lions.Empleado;
+
+import TablaProductos_Lions.Producto;
+
 public class VentanaPrincipal extends javax.swing.JFrame {
     ClaseEntidad ce = new ClaseEntidad();
     ClaseNegocio cn = new ClaseNegocio();
+    
+    Proveedores pv = new Proveedores();
+    
+    Cliente cl = new Cliente();
+    
+    Empleado em = new Empleado();
+    
+    Producto pr = new Producto();
+    
     public VentanaPrincipal() {
         initComponents();
         
@@ -127,25 +150,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_BarMenuActionPerformed
 
     private void opProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opProveedorActionPerformed
-       Proveedores verProveedor = new Proveedores();
+       Form_Proveedores verProveedor = new Form_Proveedores();
        escritorio.add(verProveedor);
        verProveedor.show();
     }//GEN-LAST:event_opProveedorActionPerformed
 
     private void opProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opProductosActionPerformed
-       Producto verProductos = new Producto();
+       Form_Producto verProductos = new Form_Producto();
        escritorio.add(verProductos);
        verProductos.show();
     }//GEN-LAST:event_opProductosActionPerformed
 
     private void opEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opEmpleadoActionPerformed
-       Empleado verEmpleados = new Empleado();
+       Form_Empleado verEmpleados = new Form_Empleado();
        escritorio.add(verEmpleados);
        verEmpleados.show();
     }//GEN-LAST:event_opEmpleadoActionPerformed
 
     private void opClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opClienteActionPerformed
-       Cliente verCliente = new Cliente();
+       Form_Cliente verCliente = new Form_Cliente();
        escritorio.add(verCliente);
        verCliente.show();
     }//GEN-LAST:event_opClienteActionPerformed

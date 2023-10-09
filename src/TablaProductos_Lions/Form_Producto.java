@@ -1,11 +1,11 @@
-package CapaPresentacion;
-import CapaNegocio.ClaseNegocio;
+package TablaProductos_Lions;
+import TablaProductos_Lions.Producto;
 import CapaEntidad.ClaseEntidad;
-public class Producto extends javax.swing.JInternalFrame {
+public class Form_Producto extends javax.swing.JInternalFrame {
     ClaseEntidad ce = new ClaseEntidad();
-    ClaseNegocio cn = new ClaseNegocio();
+    Producto cn = new Producto();
 
-    public Producto() {
+    public Form_Producto() {
         initComponents();
         cn.cargarTablaProducto(tbProducto);
     }

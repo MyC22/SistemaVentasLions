@@ -1,11 +1,11 @@
-package CapaPresentacion;
+package TablaCliente_Lions;
 import CapaEntidad.ClaseEntidad;
-import CapaNegocio.ClaseNegocio;
-public class Cliente extends javax.swing.JInternalFrame {
+import TablaCliente_Lions.Cliente;
+public class Form_Cliente extends javax.swing.JInternalFrame {
 
     ClaseEntidad ce = new ClaseEntidad();
-    ClaseNegocio cn = new ClaseNegocio();
-    public Cliente() {
+    Cliente cn = new Cliente();
+    public Form_Cliente() {
         initComponents();
         cn.cargarTablaCliente(tbCliente);
     }

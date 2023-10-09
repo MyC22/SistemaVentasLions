@@ -1,13 +1,13 @@
-package CapaPresentacion;
-import CapaNegocio.ClaseNegocio;
+package TablaProveedores_Lions;
+import TablaProveedores_Lions.Proveedores;
 import CapaEntidad.ClaseEntidad;
 
-public class Proveedores extends javax.swing.JInternalFrame {
+public class Form_Proveedores extends javax.swing.JInternalFrame {
     
     ClaseEntidad ce = new ClaseEntidad();
-    ClaseNegocio cn = new ClaseNegocio();
+    Proveedores cn = new Proveedores();
     
-    public Proveedores() {
+    public Form_Proveedores() {
         initComponents();
         cn.cargarTablaProveedores(tbProveedores);
         txtCodigoProveedor.setEnabled(false);
