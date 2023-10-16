@@ -1,7 +1,7 @@
-package CapaDatos;
+package ConexionBd;
 import java.sql.*;
 import javax.swing.JOptionPane;
-public class ClaseDatos
+public class Conexion
 {
     public static Connection getConexion()
     {

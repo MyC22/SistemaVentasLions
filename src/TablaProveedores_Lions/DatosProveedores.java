@@ -1,6 +1,7 @@
 package TablaProveedores_Lions;
-import CapaDatos.ClaseDatos;
+import ConexionBd.Conexion;
 import TablaProveedores_Lions.Proveedores;
+import ConexionBd.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,12 +13,13 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class DatosProveedores {
-    Connection con = null;
+    static Connection con = Conexion.getConexion();
+
+    public void cargarTablaProveedores(JTable tabla) {
     PreparedStatement ps = null;
     ResultSet resultado = null;
-    ResultSetMetaData rsmd = null;
+    ResultSetMetaData rsmd = null;  
     
-    public void cargarTablaProveedores(JTable tabla) {
     DefaultTableModel modeloTabla = (DefaultTableModel) tabla.getModel();
     modeloTabla.setRowCount(0);
     int columnas;
@@ -25,8 +27,8 @@ public class DatosProveedores {
         tabla.getColumnModel().getColumn(i);
     }
     try {
-        con = ClaseDatos.getConexion();
-        ps = con.prepareStatement("EXEC SP_SELECT_PROVEEDORES"); // Cambia el nombre del procedimiento almacenado aquí
+        con = Conexion.getConexion();
+        ps = con.prepareStatement("EXEC SP_SELECT_PROVEEDORES");
         resultado = ps.executeQuery();
         rsmd = resultado.getMetaData();
         columnas = rsmd.getColumnCount();
@@ -43,17 +45,17 @@ public class DatosProveedores {
 }
 
     
-     public void InsertarProveedores(Proveedores ce) {
-        try (Connection con = ClaseDatos.getConexion(); 
+     public static void InsertarProveedores(Proveedores proveedor, JTable table) {
+        try (
              PreparedStatement ps = con.prepareStatement("INSERT INTO PROVEEDOR (CODPROV, RAZONSOCIAL, RUC, DIRECCION, CORREO, TELEFONO, CELULAR) VALUES (?,?,?,?,?,?,?)"))
         {
-            ps.setString(1, ce.getCodprov());
-            ps.setString(2, ce.getRazonSocial());
-            ps.setString(3, ce.getRuc());
-            ps.setString(4, ce.getDireccion());
-            ps.setString(5, ce.getCorreo());
-            ps.setInt(6, ce.getTelefono());
-            ps.setInt(7, ce.getCelular());
+            ps.setString(1, proveedor.getCodprov());
+            ps.setString(2, proveedor.getRazonSocial());
+            ps.setString(3, proveedor.getRuc());
+            ps.setString(4, proveedor.getDireccion());
+            ps.setString(5, proveedor.getCorreo());
+            ps.setInt(6, proveedor.getTelefono());
+            ps.setInt(7, proveedor.getCelular());
             int filasAfectadas = ps.executeUpdate();
             if (filasAfectadas > 0) {
                 JOptionPane.showMessageDialog(null, "INSERCIÓN HECHA CORRECTAMENTE");

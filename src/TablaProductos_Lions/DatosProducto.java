@@ -1,7 +1,7 @@
 
 package TablaProductos_Lions;
 
-import CapaDatos.ClaseDatos;
+import ConexionBd.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -26,7 +26,7 @@ public class DatosProducto {
             tabla.getColumnModel().getColumn(i);
         }
         try {
-            con = ClaseDatos.getConexion();
+            con = Conexion.getConexion();
             ps = con.prepareStatement("SELECT tb1.CODPROD AS [CODIGO DE PRODUCTO], tb1.NOMBRE, tb2.NOMMAR AS [MARCA], tb3.RAZONSOCIAL AS [PROVEEDOR], tb3.TELEFONO, tb3.CELULAR FROM PRODUCTO tb1 INNER JOIN MARCA tb2 ON (tb1.CODMAR = tb2.CODMAR) INNER JOIN PROVEEDOR tb3 ON (tb1.CODPROV = tb3.CODPROV)");
             resultado = ps.executeQuery();
             rsmd = resultado.getMetaData();

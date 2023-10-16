@@ -1,6 +1,6 @@
 package TablaEmpleado_Lions;
 
-import CapaDatos.ClaseDatos;
+import ConexionBd.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,7 +25,7 @@ public class DatosEmpleado {
             tabla.getColumnModel().getColumn(i);
         }
         try {
-            con = ClaseDatos.getConexion();
+            con = Conexion.getConexion();
             ps = con.prepareStatement("SELECT * FROM EMPLEADO");
             resultado = ps.executeQuery();
             rsmd = resultado.getMetaData();

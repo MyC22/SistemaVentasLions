@@ -4,7 +4,6 @@ import TablaProveedores_Lions.Proveedores;
 
 public class Form_Proveedores extends javax.swing.JInternalFrame {
     
-    Proveedores ce = new Proveedores();
     DatosProveedores cn = new DatosProveedores();
     
     public Form_Proveedores() {
@@ -38,8 +37,8 @@ public class Form_Proveedores extends javax.swing.JInternalFrame {
         txtDireccion = new javax.swing.JTextField();
         txtRZ = new javax.swing.JTextField();
         txtTelefono = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         txtCelular = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbProveedores = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
@@ -58,7 +57,7 @@ public class Form_Proveedores extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Código:");
 
-        jLabel3.setText("Razón Social:");
+        jLabel3.setText("Rz. Social:");
 
         jLabel4.setText("RUC:");
 
@@ -81,31 +80,32 @@ public class Form_Proveedores extends javax.swing.JInternalFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtCodigoProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel5))
+                    .addComponent(txtCodigoProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                     .addComponent(txtRUC))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCorreo))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtRZ, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtRZ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7)
+                        .addGap(1, 1, 1)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCorreo))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -125,10 +125,10 @@ public class Form_Proveedores extends javax.swing.JInternalFrame {
                     .addComponent(txtRZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(txtRUC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
-                    .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -225,7 +225,7 @@ public class Form_Proveedores extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1106, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -266,22 +266,27 @@ public class Form_Proveedores extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnNuevoProveedorActionPerformed
 
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
-        String codprov = txtCodigoProveedor.getText();
-        String razonsocial = txtCorreo.getText();
-        String ruc = txtRUC.getText();
-        String direccion = txtDireccion.getText();
-        String correo = txtRZ.getText();
-        int telefono = Integer.parseInt(txtTelefono.getText());
-        int celular = Integer.parseInt(txtCelular.getText());
-        ce.setCodprov(codprov);
-        ce.setRazonSocial(razonsocial);
-        ce.setRuc(ruc);
-        ce.setDireccion(direccion);
-        ce.setCorreo(correo);
-        ce.setTelefono(telefono);
-        ce.setCelular(celular);
-        cn.InsertarProveedores(ce);
-        cn.cargarTablaProveedores(tbProveedores);
+    // Obtener los valores de los campos del formulario
+    String codprov = txtCodigoProveedor.getText();
+    String razonSocial = txtRZ.getText();
+    String ruc = txtRUC.getText();
+    String direccion = txtDireccion.getText();
+    String correo = txtCorreo.getText();
+    int telefono = Integer.parseInt(txtTelefono.getText());
+    int celular = Integer.parseInt(txtCelular.getText());
+
+    // Crear una instancia de Proveedores
+    Proveedores proveedor = new Proveedores();
+    proveedor.setCodprov(codprov);
+    proveedor.setRazonSocial(razonSocial);
+    proveedor.setRuc(ruc);
+    proveedor.setDireccion(direccion);
+    proveedor.setCorreo(correo);
+    proveedor.setTelefono(telefono);
+    proveedor.setCelular(celular);
+
+    // Llamar al método InsertarProveedores desde DatosProveedores
+    DatosProveedores.InsertarProveedores(proveedor, tbProveedores);
     }//GEN-LAST:event_btnInsertarActionPerformed
 
 

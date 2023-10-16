@@ -1,6 +1,6 @@
 package TablaCliente_Lions;
 
-import CapaDatos.ClaseDatos;
+import ConexionBd.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,7 +25,7 @@ public class DatosCliente {
             tabla.getColumnModel().getColumn(i);
         }
         try {
-            con = ClaseDatos.getConexion();
+            con = Conexion.getConexion();
             ps = con.prepareStatement("SELECT * FROM CLIENTE");
             resultado = ps.executeQuery();
             rsmd = resultado.getMetaData();
