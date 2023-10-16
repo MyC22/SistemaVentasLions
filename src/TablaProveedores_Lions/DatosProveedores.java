@@ -44,7 +44,6 @@ public class DatosProveedores {
     }
 }
 
-    
      public static void InsertarProveedores(Proveedores proveedor, JTable table) {
         try (
              PreparedStatement ps = con.prepareStatement("INSERT INTO PROVEEDOR (CODPROV, RAZONSOCIAL, RUC, DIRECCION, CORREO, TELEFONO, CELULAR) VALUES (?,?,?,?,?,?,?)"))

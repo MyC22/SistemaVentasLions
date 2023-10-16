@@ -60,7 +60,6 @@ public class Form_Empleado extends javax.swing.JInternalFrame {
         tbEmpleado = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         btnNuevoEmpleado = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
@@ -242,21 +241,15 @@ public class Form_Empleado extends javax.swing.JInternalFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         btnNuevoEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/new.png"))); // NOI18N
-        btnNuevoEmpleado.setText("NUEVO");
         btnNuevoEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoEmpleadoActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/insertar.png"))); // NOI18N
-        jButton2.setText("INSERTAR");
-
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/editar.png"))); // NOI18N
-        jButton3.setText("EDITAR");
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/eliminar.png"))); // NOI18N
-        jButton4.setText("ELIMINAR");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -265,8 +258,6 @@ public class Form_Empleado extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnNuevoEmpleado)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -279,7 +270,6 @@ public class Form_Empleado extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNuevoEmpleado)
-                    .addComponent(jButton2)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -314,25 +304,14 @@ public class Form_Empleado extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNuevoEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoEmpleadoActionPerformed
-        txtCodigoE.setEnabled(true);
-        txtNombreE.setEnabled(true);
-        txtApePaternoE.setEnabled(true);
-        txtApeMaternoE.setEnabled(true);
-        txtTelefonoE.setEnabled(true);
-        txtCelularE.setEnabled(true);
-        cbSexoE.setEnabled(true);
-        txtDNIE.setEnabled(true);
-        txtFregE.setEnabled(true);
-        txtEstadoE.setEnabled(true);
-        txtCorreoE.setEnabled(true);
-        txtDireccionE.setEnabled(true);
+       NuevoEmpleado ne = new NuevoEmpleado();
+       ne.setVisible(true);
     }//GEN-LAST:event_btnNuevoEmpleadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNuevoEmpleado;
     private javax.swing.JComboBox<String> cbSexoE;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel25;

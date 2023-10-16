@@ -63,7 +63,6 @@ public class Form_Cliente extends javax.swing.JInternalFrame {
         tbCliente = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         btnNuevoCliente = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
@@ -265,21 +264,15 @@ public class Form_Cliente extends javax.swing.JInternalFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         btnNuevoCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/new.png"))); // NOI18N
-        btnNuevoCliente.setText("NUEVO");
         btnNuevoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoClienteActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/insertar.png"))); // NOI18N
-        jButton2.setText("INSERTAR");
-
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/editar.png"))); // NOI18N
-        jButton4.setText("EDITAR");
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/eliminar.png"))); // NOI18N
-        jButton3.setText("ELIMINAR");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -289,12 +282,10 @@ public class Form_Cliente extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnNuevoCliente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addGap(12, 12, 12))
+                .addGap(152, 152, 152))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -302,7 +293,6 @@ public class Form_Cliente extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNuevoCliente)
-                    .addComponent(jButton2)
                     .addComponent(jButton4)
                     .addComponent(jButton3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -316,10 +306,10 @@ public class Form_Cliente extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane8)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane8))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -338,20 +328,8 @@ public class Form_Cliente extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNuevoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoClienteActionPerformed
-        txtCodigoC.setEnabled(true);
-        txtNombreC.setEnabled(true);
-        txtApePaternoC.setEnabled(true);
-        txtApeMaternoC.setEnabled(true);
-        cbTipoClienteC.setEnabled(true);
-        cbSexoC.setEnabled(true);
-        txtCorreoC.setEnabled(true);
-        txtTelefonoC.setEnabled(true);
-        txtRZC.setEnabled(true);
-        txtFregC.setEnabled(true);
-        txtEstadoC.setEnabled(true);
-        txtFnacC.setEnabled(true);
-        txtRucC.setEnabled(true);
-        txtDireccion.setEnabled(true);
+        NuevoCliente nc = new NuevoCliente();
+        nc.setVisible(true);
     }//GEN-LAST:event_btnNuevoClienteActionPerformed
 
     private void txtRZCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRZCActionPerformed
@@ -363,7 +341,6 @@ public class Form_Cliente extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnNuevoCliente;
     private javax.swing.JComboBox<String> cbSexoC;
     private javax.swing.JComboBox<String> cbTipoClienteC;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel37;
