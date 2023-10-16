@@ -1,10 +1,11 @@
-package CapaPresentacion;
+package InicioSesion;
 import javax.swing.JOptionPane;
-import CapaEntidad.ClaseEntidad;
-import CapaNegocio.ClaseNegocio;
+import InicioSesion.Presentacion;
+import InicioSesion.DatosInicioSesion;
+import CapaPresentacion.VentanaPrincipal;
 import java.sql.*;
-public class Presentacion extends javax.swing.JFrame {
-    public Presentacion() {
+public class Form_Presentacion extends javax.swing.JFrame {
+    public Form_Presentacion() {
         initComponents();
     }
     @SuppressWarnings("unchecked")
@@ -151,11 +152,10 @@ public class Presentacion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-        // TODO add your handling code here:
         String usuario = txtUsuario.getText();
         String contraseña = txtContraseña.getText();
-        ClaseNegocio cn = new ClaseNegocio();
-        ClaseEntidad u = new ClaseEntidad();
+        DatosInicioSesion cn = new DatosInicioSesion();
+        Presentacion u = new Presentacion();
         u.setUsuario(usuario);
         u.setContraseña(contraseña);
         try
@@ -176,9 +176,6 @@ public class Presentacion extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -193,20 +190,21 @@ public class Presentacion extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Presentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Form_Presentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Presentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Form_Presentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Presentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Form_Presentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Presentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Form_Presentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Presentacion().setVisible(true);
+                new Form_Presentacion().setVisible(true);
             }
         });
     }

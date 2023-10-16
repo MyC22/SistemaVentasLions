@@ -4,28 +4,24 @@ import TablaProductos_Lions.Form_Producto;
 import TablaEmpleado_Lions.Form_Empleado;
 import TablaCliente_Lions.Form_Cliente;
 import TablaProveedores_Lions.Form_Proveedores;
-import CapaNegocio.ClaseNegocio;
-import CapaEntidad.ClaseEntidad;
 
-import TablaProveedores_Lions.Proveedores;
+import TablaProveedores_Lions.DatosProveedores;
 
-import TablaCliente_Lions.Cliente;
+import TablaCliente_Lions.DatosCliente;
 
-import TablaEmpleado_Lions.Empleado;
+import TablaEmpleado_Lions.DatosEmpleado;
 
-import TablaProductos_Lions.Producto;
+import TablaProductos_Lions.DatosProducto;
 
 public class VentanaPrincipal extends javax.swing.JFrame {
-    ClaseEntidad ce = new ClaseEntidad();
-    ClaseNegocio cn = new ClaseNegocio();
     
-    Proveedores pv = new Proveedores();
+    DatosProveedores pv = new DatosProveedores();
     
-    Cliente cl = new Cliente();
+    DatosCliente cl = new DatosCliente();
     
-    Empleado em = new Empleado();
+    DatosEmpleado em = new DatosEmpleado();
     
-    Producto pr = new Producto();
+    DatosProducto pr = new DatosProducto();
     
     public VentanaPrincipal() {
         initComponents();

@@ -1,10 +1,10 @@
 package sistemaventas;
-import CapaPresentacion.Presentacion;
+import InicioSesion.Form_Presentacion;
 public class SistemaVentas
 {
     public static void main(String[] args)
     {
-        Presentacion p = new Presentacion();
+        Form_Presentacion p = new Form_Presentacion();
         p.setVisible(true);
     }
 }
